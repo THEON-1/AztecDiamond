@@ -17,7 +17,7 @@ class AztecDiamond(Frame):
         self.black = True
         self.initialize_draw()
         self.init_tiles()
-        self.place()
+        self.draw()
     
     def init_tiles(self):
         i = random()
@@ -120,7 +120,7 @@ class AztecDiamond(Frame):
 
     def grow_and_draw(self):
         self.grow()
-        self.place()
+        self.draw()
 
     def initialize_draw(self):
         self.initialize_draw_constants()
@@ -135,7 +135,7 @@ class AztecDiamond(Frame):
         self.available_size = round(min(x, y)*self.alpha)
         self.corner = ((x-self.available_size)/2, (y-self.available_size)/2)
 
-    def place(self):
+    def draw(self):
         self.canvas.delete("all")
 
         (x, y) = self.corner
