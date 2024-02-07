@@ -12,4 +12,4 @@ class ResizeTracker:
             self.height = event.height
             self.frame.dimensions = (self.width, self.height)
             self.frame.initialize_draw_constants()
-            self.frame.place()
+            self.frame.draw()
